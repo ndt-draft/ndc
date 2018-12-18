@@ -4,6 +4,8 @@ const notes = require('./notes.js')
 
 var command = process.argv[2]
 
+console.log(process.argv)
+
 if (command === 'add') {
   console.log('Adding note')
 } else if (command === 'read') {
