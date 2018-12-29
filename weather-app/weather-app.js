@@ -34,7 +34,11 @@ request({
       url: `https://api.darksky.net/forecast/c6f813641f577f4c8f678d5c6d4fdf5d/${lat},${lng}?units=si`,
       json: true
     }, (error, response, body) => {
-      console.log(`It's currently ${body.currently.temperature}. It feels like ${body.currently.apparentTemperature}`)
+      if (!error && response.statusCode === 200) {
+        console.log(`It's currently ${body.currently.temperature}. It feels like ${body.currently.apparentTemperature}`)
+      } else {
+        console.log('Unable to fetch weather.')
+      }
     })
   }
 })
