@@ -95,5 +95,11 @@ client.connect((error) => {
   //   console.log(JSON.stringify(result, null, 2))
   // })
 
+  // db.collection('Todos').createIndex({
+  //   completed: true
+  // }, null, (err, results) => {
+  //   console.log(results)
+  // })
+
   client.close()
 })
