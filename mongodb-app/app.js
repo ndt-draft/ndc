@@ -24,6 +24,14 @@ client.connect((error) => {
   //   console.log(JSON.stringify(result, undefined, 2))
   // })
 
+  // db.collection('Users').insertOne({
+  //   name: 'Jen',
+  //   age: 25,
+  //   location: 'USA'
+  // }).then(result => {
+  //   console.log(JSON.stringify(result, undefined, 2))
+  // })
+
   // db.collection('Todos').insertMany([
   //   {
   //     text: 'Finish section 7 with mongodb mongoose',
@@ -69,22 +77,40 @@ client.connect((error) => {
   //   console.log(JSON.stringify(docs, null, 2))
   // })
 
-  // db.collection('Todos').updateOne(
+  // db.collection('Todos').findOneAndUpdate(
   //   {
-  //     _id: new ObjectID('5c2cc21861f0c50de0113138')
+  //     _id: new ObjectID('5c2cc745939e301758d3b9bc')
   //   },
   //   {
   //     $set: {
   //       text: 'Mongodb vs mysql'
   //     }
   //   },
-  //   (err, result) => {
-  //     if (err) {
-  //       console.log(err)
-  //     }
-  //     console.log(JSON.stringify(result, null, 2))
+  //   {
+  //     returnOriginal: false
   //   }
-  // )
+  // ).then(result => {
+  //   console.log(JSON.stringify(result, null, 2))
+  // })
+
+  // db.collection('Users').findOneAndUpdate(
+  //   {
+  //     _id: new ObjectID('5c2ccf80e0044715d41726c7')
+  //   },
+  //   {
+  //     $set: {
+  //       name: 'Jane'
+  //     },
+  //     $inc: {
+  //       age: 1
+  //     }
+  //   },
+  //   {
+  //     returnOriginal: false
+  //   }
+  // ).then(result => {
+  //   console.log(JSON.stringify(result, null, 2))
+  // })
 
   // db.collection('Todos').deleteOne({
   //   _id: new ObjectID('5c2cc6acefe005d9630b3036')
