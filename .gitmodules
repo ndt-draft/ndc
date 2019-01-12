@@ -1,0 +1,3 @@
+[submodule "ndc-todo-app"]
+	path = ndc-todo-app
+	url = git@github.com:thanh4890/ndc-todo-app.git
